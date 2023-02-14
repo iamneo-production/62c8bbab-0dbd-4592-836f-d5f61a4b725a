@@ -6,5 +6,7 @@ from rest_framework import routers
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='index')
+    path('', views.home, name='home'),
+    path('iris/', include('irisApp.urls')),
+    path('user/', views.user, name='user')
 ]
