@@ -56,7 +56,7 @@ ROOT_URLCONF = 'codex.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'codexui/build')],
+        'DIRS': [os.path.join(BASE_DIR, 'codexui/public')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

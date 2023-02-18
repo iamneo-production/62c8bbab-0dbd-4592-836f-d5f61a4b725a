@@ -1,0 +1,23 @@
+*{
+    background-color: blue;
+}
+
+body{
+    background-color: blue;
+}
+
+nav{
+    color: pink;
+}
+
+.container .form-label{
+    background-color: burlywood;
+}
+
+.dashboard-h{
+    color: red;
+}
+
+.hello{
+    color: red;
+}
