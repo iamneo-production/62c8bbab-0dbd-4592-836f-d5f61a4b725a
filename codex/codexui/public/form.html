@@ -1,25 +1,225 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    </head>
-    <body>
-        
-        <form action="result">
-            City: <input type="text" name="City"><br><br>
-            Year: <input type="text" name="Year"><br><br>
-            SO2: <input type="text" name="SO2"><br><br>
-            NH3: <input type="text" name="NH3"><br><br>
-            NOX: <input type="text" name="NOX"><br><br>
-            PM10: <input type="text" name="PM10"><br><br>
-            PM2.5: <input type="text" name="PM25"><br><br>
-            <input type="submit" name="" value="submit">
-        </form>
-    </body>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link rel="stylesheet" href="form.css" />
+</head>
+<style>
+    body {
+        background-color: #ded3ca;
+        margin: 0;
+        width: auto;
+    }
+
+    .team-n {
+        color: brown;
+        font-weight: 1000;
+        font-size: xx-large;
+    }
+
+    .nav-list {
+        color: black;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+
+    .p-head {
+        width: auto;
+        margin: auto;
+        float: left;
+        position: relative;
+        left: 4rem;
+        top: 4rem;
+    }
+
+    .p-head h1 {
+        font-weight: 800;
+        color: rgb(2, 58, 58);
+        font-size: 5rem;
+        margin: auto;
+        width: auto;
+    }
+
+    .form-aqi {
+        float: right;
+        width: auto;
+        height: auto;
+        margin: 2rem;
+        background-color: #88B0D7;
+        padding: 2rem;
+        border-radius: 2rem;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 3rem;
+    }
+
+    .form-aqi h1 {
+        font-weight: 900;
+        color: rgb(2, 58, 58);
+    }
+
+    .form-aqi .form-label {
+        font-weight: 700;
+        font-size: 1.3rem;
+        color: rgb(2, 58, 58);
+
+    }
+
+    .form-aqi button {
+        background-color: rgb(2, 58, 58);
+        border: none;
+        font-weight: 500;
+        font-size: 1.3rem;
+        margin-top: 1rem;
+    }
+
+    .form-aqi button:hover {
+        background-color: brown;
+
+    }
+
+    .form-label {
+        position: relative;
+        left: 12%;
+    }
+
+    .form-control,
+    .form-select {
+        margin-top: 0.1rem;
+        margin-bottom: 0.1rem;
+        width: 10rem;
+        position: relative;
+        left: 10%;
+    }
+
+    .ct {
+        position: relative;
+        left: 20%;
+        width: 20rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sp {
+        position: relative;
+        left: 20%;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary nav-bar">
+        <div class="container-fluid">
+            <a class="navbar-brand team-n" href="#">Team CodeX</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse nav-list" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Predict</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Source Code</a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Previous Year Data
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">hello</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="p-head">
+        <h1>Predict AQI</h1>
+        <p>About Predict AQI</p>
+    </div>
+
+    <div class="container form-aqi">
+        <h1>Predict AQI</h1>
+        <form action="{% url 'result' %}" method="GET" onsubmit=takevalue()>
+           
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label ct">City</label>
+            <select class="form-select ct" aria-label="Default select example" name="city">
+                <option selected>Select City</option>
+                <option value="Warangal">Warangal</option>
+                <option value="Khammam">Khammam</option>
+                <option value="Nizamabad">Nizamabad</option>
+                <option value="Karimnagar">Karimnagar</option>
+                <option value="Adilabad">Adilabad</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label ct" >Year</label>
+            <input type="text" class="form-control ct" id="formGroupExampleInput" placeholder="Enter Year" name="year"/>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="formGroupExampleInput" class="form-label">SO2</label>
+                <input type="text" class="form-control" placeholder="SO2" aria-label="First name" name="so2">
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput" class="form-label">NH3</label>
+                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" name="nh3">
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput" class="form-label">NOX</label>
+                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" name="nox">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="formGroupExampleInput" class="form-label sp">PM10</label>
+                <input type="text" class="form-control sp" placeholder="First name" aria-label="First name" name="pm10">
+            </div>
+            <div class="col">
+                <label for="formGroupExampleInput" class="form-label sp">PM2.5</label>
+                <input type="text" class="form-control sp" placeholder="Last name" aria-label="Last name" name="pm25">
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit" name="" value="submit">Predict</button>
+    </form>
+    </div>
+
+    <script>
+        function takevalue(){
+            var city=document.getElementById('city').value;
+            document.write('City: '+city)
+        }
+    </script>
+
+
+</body>
+
 </html>
+
+
+
+

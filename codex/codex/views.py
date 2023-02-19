@@ -8,10 +8,13 @@ import joblib
 def home(request):
     return render(request, 'home.html')
 
-def user(request):
-    username=request.GET['username']
-    return render(request, 'user.html', {'name':username})
+def sourcecode(request):
+    return render(request, 'source-code.html')
 
-def form(request):
-    return render(request, 'form.html')
+def features(request):
+    return render(request, 'features.html')
+
+def team(request):
+    return render(request, 'team.html')
+
 

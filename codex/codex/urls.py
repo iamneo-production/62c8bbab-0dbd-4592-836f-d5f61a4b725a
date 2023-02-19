@@ -6,7 +6,9 @@ from rest_framework import routers
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('aqiApp.urls')),
-    path('user/', views.user, name='user'),
-
+    path('', views.home, name='home'),
+    path('aqi', include('aqiApp.urls')),
+    path('source-code', views.sourcecode, name='source-code'),
+    path('features', views.features, name='features'),
+    path('team', views.team, name='team'),
 ]
