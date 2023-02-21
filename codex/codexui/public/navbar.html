@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link rel="stylesheet" href="home.css" />
+</head>
+
+<style>
+    body {
+        background-color: #ded3ca;
+        margin: 0;
+        width: auto;
+        overflow: hidden;
+    }
+
+    .team-n {
+        color: brown;
+        font-weight: 1000;
+        font-size: xx-large;
+    }
+
+    .nav-list {
+        color: black;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+</style>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary nav-bar">
+        <div class="container-fluid">
+          <a class="navbar-brand team-n" href="/">Team CodeX</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse nav-list" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url 'features' %}">Features</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle active"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Predict
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="{% url 'predict-aqi' %}">Predict AQI</a></li>
+                  <li><a class="dropdown-item" href="{% url 'source-code' %}">Predict Heat Waves</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url 'source-code' %}">Source Code</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url 'team' %}">Team</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+</body>
+
+</html>
