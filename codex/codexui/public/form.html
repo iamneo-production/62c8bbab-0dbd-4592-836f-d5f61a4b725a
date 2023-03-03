@@ -1,225 +1,417 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title></title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <link rel="stylesheet" href="form.css" />
-</head>
-<style>
-    body {
-        background-color: #ded3ca;
-        margin: 0;
-        width: auto;
-    }
+  </head>
 
-    .team-n {
-        color: brown;
-        font-weight: 1000;
-        font-size: xx-large;
-    }
+  <style>
+      @import url("https://fonts.googleapis.com/css2?family=Labrada:wght@400;700&display=swap");
+body {
+    background-image: url("/static/aqiresult.jpg");
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    width: auto;
+}
 
-    .nav-list {
-        color: black;
-        font-size: 1.3rem;
-        font-weight: 500;
-    }
+.team-n {
+  color: brown;
+  font-weight: 1000;
+  font-size: xx-large;
+}
 
-    .p-head {
-        width: auto;
-        margin: auto;
-        float: left;
-        position: relative;
-        left: 4rem;
-        top: 4rem;
-    }
+.nav-list {
+  color: #323232;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: "Labrada", serif;
+}
 
-    .p-head h1 {
-        font-weight: 800;
-        color: rgb(2, 58, 58);
-        font-size: 5rem;
-        margin: auto;
-        width: auto;
-    }
+.nav-list ul {
+  gap: 1rem;
+  margin-right: 0.5rem;
+}
 
-    .form-aqi {
-        float: right;
-        width: auto;
-        height: auto;
-        margin: 2rem;
-        background-color: #88B0D7;
-        padding: 2rem;
-        border-radius: 2rem;
-        width: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 3rem;
-    }
+.nav-list a:hover {
+  color: #fff !important;
+  margin-top: 0.2rem;
 
-    .form-aqi h1 {
-        font-weight: 900;
-        color: rgb(2, 58, 58);
-    }
+}
 
-    .form-aqi .form-label {
-        font-weight: 700;
-        font-size: 1.3rem;
-        color: rgb(2, 58, 58);
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
 
-    }
+.material-symbols-outlined {
+  position: relative;
+  margin-top: 2%;
+  left: 5%;
+  float: left;
+  size: 15rem;
+  transform: scale(2);
+}
 
-    .form-aqi button {
-        background-color: rgb(2, 58, 58);
-        border: none;
-        font-weight: 500;
-        font-size: 1.3rem;
-        margin-top: 1rem;
-    }
+.back-arr a {
+  text-decoration: none;
+  color: brown;
+}
 
-    .form-aqi button:hover {
-        background-color: brown;
+.p-head {
+  width: auto;
+  margin: 1rem;
+  float: left;
+  position: relative;
+  left: 4rem;
+  top: 4rem;
+}
+.p-head h1 {
+  font-weight: 800;
+  color: #000000c7;
+  font-size: 5rem;
+  margin: auto;
+  margin-bottom: 0.5rem;
+  width: auto;
+}
 
-    }
+.p-head p {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 50vw;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: white;
+}
 
-    .form-label {
-        position: relative;
-        left: 12%;
-    }
+.p-head ul {
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
 
-    .form-control,
-    .form-select {
-        margin-top: 0.1rem;
-        margin-bottom: 0.1rem;
-        width: 10rem;
-        position: relative;
-        left: 10%;
-    }
+.form-aqi {
+  float: right;
+  width: auto;
+  height: auto;
+  margin-top: 2rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  background-image: radial-gradient(
+    circle,
+    #f3bb8d,
+    #f2be95,
+    #f1c09e,
+    #efc3a6,
+    #edc6ae,
+    #ecc4ac,
+    #eac3ab,
+    #e9c1a9,
+    #e8ba9d,
+    #e6b492,
+    #e4ad86,
+    #e1a77a
+  );
+  padding: 2rem;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+  box-shadow: 1rem 1rem 1rem #dfa438;
+}
 
-    .ct {
-        position: relative;
-        left: 20%;
-        width: 20rem;
-        display: flex;
-        justify-content: center;
-    }
+.form-aqi h1 {
+  font-weight: 900;
+  color: #3e74a1;
+}
 
-    .sp {
-        position: relative;
-        left: 20%;
-    }
+.form-aqi .form-label {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: rgb(2, 58, 58);
+}
+
+.form-aqi button {
+  background-color: #000000;
+  border: none;
+  margin-top: 1rem;
+  width: 20rem;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 500px;
+  transition-property: background-color, border-color, color, box-shadow, filter;
+  transition-duration: 0.3s;
+  border: 1px solid transparent;
+  letter-spacing: 2px;
+  min-width: 160px;
+  text-transform: uppercase;
+  white-space: normal;
+  font-weight: 700;
+  text-align: center;
+  padding: 17px 48px;
+  height: 48px;
+  position: relative;
+  left: 22%;
+}
+
+.form-aqi button:hover {
+  transform: scale(1.04);
+  letter-spacing: 3px;
+  color: #3e74a1;
+  background-color: white;
+  border: 2px solid #323232;
+}
+
+.form-label {
+  position: relative;
+  left: 12%;
+}
+
+.form-control,
+.form-select {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+  width: 10rem;
+  position: relative;
+}
+
+.ct {
+  position: relative;
+  left: 20%;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+}
+
+.sp-1 {
+  position: relative;
+  left: 40%;
+}
+
+.st {
+  justify-content: center;
+  display: flex;
+  left: 20%;
+}
+
+.sk {
+  justify-content: center;
+  display: flex;
+  left: -15%;
+}
+
+.back-arr a:hover {
+  color: white;
+}
 </style>
 
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary nav-bar">
-        <div class="container-fluid">
-            <a class="navbar-brand team-n" href="#">Team CodeX</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse nav-list" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Predict</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Source Code</a>
-                    </li>
-                    <li class="nav-item dropdown active">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Previous Year Data
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">hello</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+  <body>
+    <nav class="navbar navbar-expand-lg nav-bar bg-*">
+      <div class="container-fluid skii">
+        <a class="navbar-brand team-n" href="#">Team CodeX</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end nav-list" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'predict-aqi'%}">Predict AQI</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'predict-heatwave'%}">Predict Heat Wave</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'source-code'%}">Source Code</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'team'%}">Team</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
+    <div class="back-arr">
+      <a href="/">
+        <span class="material-symbols-outlined"> arrow_back </span></a
+      >
+    </div>
+
     <div class="p-head">
-        <h1>Predict AQI</h1>
-        <p>About Predict AQI</p>
+      <h1>Predict AQI</h1>
+      <p>
+        The Air Quality Index (AQI) is a numerical rating system used to
+        communicate how polluted the air is in a particular area. The AQI
+        typically ranges from 0 to 500, with higher numbers indicating worse air
+        quality.
+      </p>
+      <ul>
+        <li>AQI values of 0 to 50 are considered Good</li>
+        <li>AQI values of 51 to 100 are considered Satisfactory</li>
+        <li>AQI values of 101 to 200 are considered Moderate</li>
+        <li>AQI values of 201 to 300 are considered Poor</li>
+        <li>AQI values of 301 to 400 are considered Very Poor</li>
+        <li>AQI values of 401 to 500 are considered Severe</li>
+        <br>
+        <li>AQI values above 100 are considered unhealthy for sensitive groups</li>
+        <li>AQI values above 150 are considered unhealthy for everyone</li>
+      </ul>
+      <p>
+        Predict The AQI here by entering the name to City, Year, Month, and
+        Chemical combination of SO2, NH3, NOX, PM10, PM2.5
+        <br /><br />
+        Accuracy: 87.2%
+      </p>
     </div>
 
     <div class="container form-aqi">
-        <h1>Predict AQI</h1>
-        <form action="{% url 'result' %}" method="GET" onsubmit=takevalue()>
-           
-        <div class="mb-3">
-            <label for="formGroupExampleInput" class="form-label ct">City</label>
-            <select class="form-select ct" aria-label="Default select example" name="city">
-                <option selected>Select City</option>
-                <option value="Warangal">Warangal</option>
-                <option value="Khammam">Khammam</option>
-                <option value="Nizamabad">Nizamabad</option>
-                <option value="Karimnagar">Karimnagar</option>
-                <option value="Adilabad">Adilabad</option>
-            </select>
+      <h1>Predict AQI</h1>
+      <form action="{% url 'result' %}" method="GET" onsubmit=takevalue()>
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label ct">City</label>
+        <select class="form-select ct" aria-label="Default select example" name="city">
+          <option selected>Select City</option>
+          <option value="Warangal">Warangal</option>
+          <option value="Khammam">Khammam</option>
+          <option value="Nizamabad">Nizamabad</option>
+          <option value="Karimnagar">Karimnagar</option>
+          <option value="Adilabad">Adilabad</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label for="formGroupExampleInput" class="form-label sk">Year</label>
+          <input
+            type="text"
+            class="form-control st"
+            placeholder="Enter Year"
+            aria-label="Enter Year"
+            name="year"
+          />
         </div>
-        <div class="mb-3">
-            <label for="formGroupExampleInput" class="form-label ct" >Year</label>
-            <input type="text" class="form-control ct" id="formGroupExampleInput" placeholder="Enter Year" name="year"/>
+        <div class="col">
+          <label for="formGroupExampleInput" class="form-label sk">Month</label>
+          <select class="form-select st" aria-label="Default select example" name="month">
+            <option selected>Month</option>
+            <option value="January">January</option>
+            <option value="Febuary">Febuary</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+          </select>
         </div>
-        <div class="row">
-            <div class="col">
-                <label for="formGroupExampleInput" class="form-label">SO2</label>
-                <input type="text" class="form-control" placeholder="SO2" aria-label="First name" name="so2">
-            </div>
-            <div class="col">
-                <label for="formGroupExampleInput" class="form-label">NH3</label>
-                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" name="nh3">
-            </div>
-            <div class="col">
-                <label for="formGroupExampleInput" class="form-label">NOX</label>
-                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" name="nox">
-            </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label for="formGroupExampleInput" class="form-label">SO2</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="SO2"
+            aria-label="SO2"
+            name="so2"
+          />
         </div>
-        <div class="row">
-            <div class="col">
-                <label for="formGroupExampleInput" class="form-label sp">PM10</label>
-                <input type="text" class="form-control sp" placeholder="First name" aria-label="First name" name="pm10">
-            </div>
-            <div class="col">
-                <label for="formGroupExampleInput" class="form-label sp">PM2.5</label>
-                <input type="text" class="form-control sp" placeholder="Last name" aria-label="Last name" name="pm25">
-            </div>
+        <div class="col">
+          <label for="formGroupExampleInput" class="form-label">NH3</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="NH3"
+            aria-label="NH3"
+            name="nh3"
+          />
         </div>
-        <button class="btn btn-primary" type="submit" name="" value="submit">Predict</button>
+        <div class="col">
+          <label for="formGroupExampleInput" class="form-label">NOX</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="NOX"
+            aria-label="NOX"
+            name="nox"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="formGroupExampleInput" class="form-label sp-1"
+            >PM10</label
+          >
+          <input
+            type="text"
+            class="form-control sp-1"
+            placeholder="PM10"
+            aria-label="pm10"
+            name="pm10"
+          />
+        </div>
+        <div class="col">
+          <label for="formGroupExampleInput" class="form-label sp-2"
+            >PM2.5</label
+          >
+          <input
+            type="text"
+            class="form-control sp-2"
+            placeholder="PM2.5"
+            aria-label="PM2.5"
+            name="pm25"
+          />
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit" name="" value="submit">Predict</button>
     </form>
     </div>
 
     <script>
-        function takevalue(){
-            var city=document.getElementById('city').value;
-            document.write('City: '+city)
-        }
-    </script>
-
-
-</body>
-
+      function takevalue(){
+          var city=document.getElementById('city').value;
+          document.write('City: '+city)
+      }
+  </script>
+  </body>
 </html>
-
-
-
-
+<!--  Developed By Team Codex -->
+<!--  Credits: Harsh Anand (Github: anand-harsh), Rishit Kumar  -->

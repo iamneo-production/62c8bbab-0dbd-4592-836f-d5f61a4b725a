@@ -14,3 +14,6 @@ from django.core.asgi import get_asgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'codex.settings')
 
 application = get_asgi_application()
+
+# Developed By Team Codex
+# Credits: Harsh Anand (Github: anand-harsh), Rishit Kumar 

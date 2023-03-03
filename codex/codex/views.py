@@ -18,3 +18,5 @@ def team(request):
     return render(request, 'team.html')
 
 
+# Developed By Team Codex
+# Credits: Harsh Anand (Github: anand-harsh), Rishit Kumar 

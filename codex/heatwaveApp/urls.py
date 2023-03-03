@@ -3,8 +3,8 @@ from . import views
 
 urlpatterns=[
  
-    path('', views.aqipredictor, name='predict-aqi'),
-    path('result/', views.predict_aqi, name='result')
+    path('', views.heatwavepredictor, name='predict-heatwave'),
+    path('heatwaveresult/', views.predict_heatwave, name='heatwaveresult')
     
 ]
 

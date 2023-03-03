@@ -1,4 +1,3 @@
-{% block content %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,31 +6,407 @@
     <title></title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="aqi-result.css" />
+
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="stylesheet" href="source-code.css" />
   </head>
 
   <style>
+    @import url("https://fonts.googleapis.com/css2?family=Labrada:wght@400;700&display=swap");
+
+body {
+  background-image: url("/static/src3.png");
+  background-color: rgb(20,26,49);
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+
+.team-n {
+    color: brown;
+    font-weight: 1000;
+    font-size: xx-large;
+  }
+
+  .nav-list {
+
+    color: #323232;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: "Labrada", serif;
+  }
+
+  .nav-list ul {
+    position: relative;
+    left: 40vw;
+    gap: 1rem;
+    margin-right: 1.2rem;
+  }
+
+  .nav-list a:hover {
+    color: #fff !important;
+    margin-top: 0.2rem;
+
+  }
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.back-arr a {
+  text-decoration: none;
+  position: relative;
+  margin-top: 2%;
+  left: 5%;
+  size: 15rem;
+  color: brown;
+  float: left;
+  transform: scale(2);
+}
+
+.back-arr a:hover {
+  color: whitesmoke;
+}
+
+.head {
+  position: relative;
+  top: 5rem;
+  left: 2rem;
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+}
+
+.src {
+  position: relative;
+  top: 20vh;
+}
+
+.accordion-item {
+  margin: 2rem;
+}
+
+#accordionFlushExample .accordion-item {
+  font-weight: 500;
+  font-size: 1.3rem;
+  border-radius: 2rem !important;
+}
+
+pre {
+  background-color: black;
+  filter: opacity(85%);
+  color: white;
+  font-size: small;
+  box-shadow: 1rem 1rem 2rem rgb(165, 155, 42);
+}
+
+.accordion-body {
+  background-image: url("/static/srcpic.jpg");
+}
+
+.material-symbols-outlined {
+  margin-bottom: 1rem;
+  text-decoration: none;
+  position: relative;
+  transition: height 0.4s ease;
+  left: 95%;
+}
+
+.material-symbols-outlined a {
+  color: rgb(81, 255, 0);
+}
+
+.material-symbols-outlined a:hover{
+  color: white;
+}
+
+.csv-d a img{
+  width: 2rem;
+  height: 2rem;
+  float: right;
+  position: relative;
+  right: 8%;
+}
+
+.csv-d a img:hover{
+  width: 2.1rem;
+  height: 2.1rem;
+}
 
   </style>
-
   <body>
+    <nav class="navbar navbar-expand-lg nav-bar bg-*">
+      <div class="container-fluid skii">
+        <a class="navbar-brand team-n" href="/">Team CodeX</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse nav-list" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'predict-aqi'%}">Predict AQI</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'predict-heatwave'%}">Predict Heat Wave</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'source-code'%}">Source Code</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url 'team'%}">Team</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-    {% include 'navbar.html' %}
+    <div class="back-arr">
+      <a href="/">
+        <span class="material-symbols-outlined"> arrow_back </span></a
+      >
+    </div>
 
-    source code
+    <div class="container head">
+      <h1>Source Code</h1>
+    </div>
 
-    
+    <div class="container src">
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item accordion-border-radius">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne"
+              aria-expanded="false"
+              aria-controls="flush-collapseOne"
+            >
+              AQI Machine Learning Model Source Code
+            </button>
+          </h2>
+          <div
+            id="flush-collapseOne"
+            class="accordion-collapse collapse"
+            aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body">
+              <div class="csv-d">
+                <a href="/static/aqi-data.csv" download="aqi-data.csv">
+                  <img src="/static/csv.png" alt="csv file" />
+                </a>
+              </div>
+              <span class="material-symbols-outlined">
+                <a href="/static/aqi-model.py" download="aqi-model.py">Download</a>
+              </span>
+              <pre>
+                <code id="code" class="language-python">
+                
+                  # Importing the libraries
+
+                  import numpy as np
+                  import matplotlib.pyplot as plt
+                  import pandas as pd
+                  
+                  # Importing the dataset
+                  
+                  dataset = pd.read_csv("aqi-data.csv")
+                  X = dataset.iloc[ : , :-1].values
+                  Y = dataset.iloc[ : , -1].values
+                  
+                  
+                  # Taking Care of Missing data
+                  
+                  l = X
+                  for i in range(len(l)):
+                      for j in range(8):
+                          if l[i][j] == 'BDL':
+                              l[i][j] = 'Nan'
+                  
+                  for i in range(len(l)):
+                      for j in range(8):
+                          if l[i][j] == ' ':
+                              l[i][j] = 'Nan'
+                  
+                  
+                  from sklearn.impute import SimpleImputer
+                  imputer = SimpleImputer(missing_values = np.nan, strategy = "mean")
+                  imputer.fit(X[:, 2:10])
+                  X[:,2:10] = imputer.transform(X[:,2:10])
+                  
+                  mean = np.nanmean(Y)
+                  Y[np.isnan(Y)] = mean
+                  
+                  # Encoding Categorical Data
+                  
+                  ## Encoding the Independent Variable
+                  
+                  from sklearn.compose import ColumnTransformer
+                  from sklearn.preprocessing import OneHotEncoder
+                  ct = ColumnTransformer(transformers=[('encoder', OneHotEncoder() , [0,1])], remainder="passthrough")
+                  X = np.array(ct.fit_transform(X))
+                  
+                  # Splitting Dataset into Training set and Test set.
+                  
+                  from sklearn.model_selection import train_test_split
+                  X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.2, random_state=1)
+                  
+                  # Training the Lasso regression model on the Training set
+                  
+                  from sklearn.linear_model import Lasso
+                  regressor = Lasso()
+                  regressor.fit(X_train, Y_train)
+                  
+                  # Predicting the result of the test set
+                  
+                  Y_predicted = regressor.predict(X_test)
+                  np.set_printoptions(precision =2)
+                  
+                  # Evaluating the Model Accuracy
+                  
+                  from sklearn.metrics import r2_score
+                  r2_score(Y_test, Y_predicted)
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo"
+              aria-expanded="false"
+              aria-controls="flush-collapseTwo"
+            >
+              Heat Waves Machine Learning Model Source Code
+            </button>
+          </h2>
+          <div
+            id="flush-collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="flush-headingTwo"
+            data-bs-parent="#accordionFlushExample"
+          >
+            <div class="accordion-body">
+              <div class="csv-d">
+                <a href="/static/heatwave-data.csv" download="heatwave-data.csv">
+                  <img src="/static/csv.png" alt="csv file" />
+                </a>
+              </div>
+              <span class="material-symbols-outlined">
+                <a href="/static/hw-model.py" download="hw-model.py">Download</a>
+              </span>
+              <pre>
+                <code id="code" class="language-python">
+                
+                  # Importing the libraries
+                  import numpy as np
+                  import matplotlib.pyplot as plt
+                  import pandas as pd
+                  
+                  # Importing the dataset
+                  dataset = pd.read_csv("heatwave-data.csv")
+
+                  X = dataset.iloc[ : , [0,2,3,4,5,6,7,8,9,10]].values
+                  Y = dataset.iloc[ : , -2].values
+ 
+                  # Taking Care of Missing data
+                  l = X
+                  for i in range(len(l)):
+                      for j in range(10):
+                          if l[i][j] == 'BDL':
+                              l[i][j] = 'Nan'
+                  
+                  for i in range(len(l)):
+                      for j in range(10):
+                          if l[i][j] == ' ':
+                              l[i][j] = 'Nan'
+                  
+                  from sklearn.impute import SimpleImputer
+                  imputer = SimpleImputer(missing_values = np.nan, strategy = "mean")
+                  imputer.fit(X[:, 3:11])
+                  X[:,3:11] = imputer.transform(X[:,3:11])
+                  mean = np.nanmean(Y)
+                  Y[np.isnan(Y)] = mean
+                  
+                  # Encoding Categorical Data
+                  ## Encoding the Independent Variable
+                  from sklearn.compose import ColumnTransformer
+                  from sklearn.preprocessing import OneHotEncoder
+                  ct = ColumnTransformer(transformers=[('encoder', OneHotEncoder() , [0,1])], remainder="passthrough")
+                  X = np.array(ct.fit_transform(X))
+                  
+                  
+                  # Splitting Dataset into Training set and Test set.
+                  from sklearn.model_selection import train_test_split
+                  X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.2, random_state=1)
+                  
+                  # Training the Multiple Linear regression model on the Training set
+                  from sklearn.linear_model import LinearRegression
+                  regressor = LinearRegression()
+                  regressor.fit(X_train, Y_train)
+                  
+                  # Predicting the Test set results
+                  Y_test_predicted = regressor.predict(X_test)
+                  np.set_printoptions(precision = 2)
+
+                  # Evaluating the Model Accuracy
+                  from sklearn.metrics import r2_score
+                  r2_score(Y_test, Y_test_predicted)
+
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script></script>
   </body>
 </html>
-{% endblock %}
+
+<!--  Developed By Team Codex -->
+<!--  Credits: Harsh Anand (Github: anand-harsh), Rishit Kumar  -->

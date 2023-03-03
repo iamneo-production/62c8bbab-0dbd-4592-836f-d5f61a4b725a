@@ -14,3 +14,6 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'codex.settings')
 
 application = get_wsgi_application()
+
+# Developed By Team Codex
+# Credits: Harsh Anand (Github: anand-harsh), Rishit Kumar 

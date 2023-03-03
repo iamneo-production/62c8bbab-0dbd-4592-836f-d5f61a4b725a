@@ -1,37 +1,197 @@
 {% block content %}
+{% load static %}
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="aqi-result.css" />
-  </head>
 
-  <style>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
 
-  <body>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Labrada:wght@400;700&family=Lilita+One&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Merienda:wght@800;900&family=Quantico:wght@700&display=swap");
 
-    {% include 'navbar.html' %}
+  body {
+    background-image: url("/static/pic.jpeg");
+    backdrop-filter: blur(3px);
+    background-size: cover;
+    height: 100%;
+    background-repeat: no-repeat;
+  }
 
-    home
+  .team-n {
+    color: brown;
+    font-weight: 1000;
+    font-size: xx-large;
+  }
 
-    
-  </body>
+  .nav-list {
+    color: #323232;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: "Labrada", serif;
+  }
+
+  .nav-list ul {
+    gap: 1rem;
+    margin-right: 0.5rem;
+  }
+
+  .nav-list a:hover {
+    color: #fff !important;
+    margin-top: 0.2rem;
+  }
+
+  .home-b {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10%;
+    margin-right: 0%;
+    margin-left: 8%;
+    width: max-content;
+  }
+
+  img {
+    width: 25rem;
+    height: 35rem;
+    float: right;
+    margin-top: 2rem;
+    margin-right: 4rem;
+  }
+
+  .home-b .head {
+    font-weight: 900;
+    font-size: 5.5rem;
+    font-family: "Merienda", cursive;
+    letter-spacing: 0.2rem;
+    text-shadow: 0.2rem 0.2rem 1rem rgb(226, 184, 46);
+  }
+
+  .home-b button {
+    border-radius: 500px;
+    padding: 1rem 3rem;
+    transition-duration: 0.4s;
+    justify-content: center;
+    margin: 2rem;
+    background-color: rgba(239, 125, 31, 0.581);
+    border: none;
+    font-size: 1.2rem;
+  }
+
+  .home-b button:hover {
+    background-color: rgb(235, 221, 221);
+    color: rgb(0, 0, 0);
+    transition-duration: 0.5s;
+    box-shadow: 0.2rem 0.2rem 1rem rgb(226, 184, 46);
+  }
+
+  .home-btn button {
+    font-weight: 700;
+  }
+
+  span {
+    margin-left: 2rem;
+    position: sticky;
+    top: 6%;
+  }
+
+  .blockquote p {
+    color: #f9f6f0;
+    font-weight: 600;
+    font-size: 1.6rem;
+  }
+
+  .foot {
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    margin-top: 7rem;
+    margin-left: 10vw;
+    padding: 1rem;
+  }
+
+  .card-body p {
+    font-size: 1.6rem;
+  }
+
+  cite {
+    font-size: 1.6rem;
+    color: white;
+    margin-left: -1.8rem;
+  }
+
+  .blockquote-footer {
+    font-size: 1.8rem;
+    color: white;
+  }
+
+
+
+  @media screen and (max-width: 1425px) {
+    img {
+      display: none;
+    }
+  }
+</style>
+
+<body>
+  {% include 'navbar.html' %}
+
+  <div class="container home-b">
+    <p class="head">Predict Your Data</p>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>
+          Predicting the future isn’t magic, it’s artificial intelligence.
+        </p>
+        <footer class="blockquote-footer">
+           <cite title="Source Title">~ By Dave Waters</cite>
+        </footer>
+      </blockquote>
+    </div>
+    <div class="home-btn">
+      <button class="btn btn-primary" type="button" onclick="window.location.href = '{% url 'predict-aqi' %}';">
+        Predict AQI<span class="material-symbols-outlined">
+          arrow_forward_ios
+        </span>
+      </button>
+
+      <button class="btn btn-primary" type="button" onclick="window.location.href = '{% url 'predict-heatwave' %}';">
+        Predict Heat Wave<span class="material-symbols-outlined">
+          arrow_forward_ios
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <i class="fa" style="font-size: 22px">&#xf1f9;</i>
+    &nbsp;Copyright Made By Team Codex
+  </footer>
+</body>
+
 </html>
+
 {% endblock %}
+
+<!--  Developed By Team Codex -->
+<!--  Credits: Harsh Anand (Github: anand-harsh), Rishit Kumar  -->

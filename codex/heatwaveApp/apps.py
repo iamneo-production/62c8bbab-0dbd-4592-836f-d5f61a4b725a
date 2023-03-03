@@ -1,9 +1,9 @@
 from django.apps import AppConfig
 
 
-class AqiappConfig(AppConfig):
+class HeatwaveappConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'aqiApp'
+    name = 'heatwaveApp'
 
 # Developed By Team Codex
 # Credits: Harsh Anand (Github: anand-harsh), Rishit Kumar 
