@@ -17,6 +17,8 @@
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css" />
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <!--Copyright Link-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
 </head>
 
@@ -226,6 +228,15 @@
   .unit{
     font-size: 0.8rem;
   }
+
+  .foot {
+    display: inline-block;
+    align-items: centre;
+    position: relative;
+    top: 11rem;
+    left: 40vw;
+    color: rgb(255, 255, 255);
+  }
 </style>
 
 <body>
@@ -272,10 +283,11 @@
       its departure from normal.
     </p>
     <ul>
-      <li>Green (No action) -> Normal Day</li>
-      <li>Yellow Alert (Be updated) -> Heat Alert</li>
-      <li>Orange Alert (Be prepared) -> Severe Heat Alert for the day</li>
-      <li>Red Alert (Take Action) -> Extreme Heat Alert for the day</li>
+      <li>Green Alert -> Normal Day</li>
+      <li>Yellow Alert (Be updated) -> Caution </li>
+      <li>Orange Alert (Be prepared) -> Extreme Caution</li>
+      <li>Orangish Brown Alert (Take Action) -> Severe</li>
+      <li>Red Alert (Take Action) -> Danger </li>
     </ul>
     <p>
       Predict The Heat Waves here by entering the name to City, Year, Month,
@@ -374,6 +386,11 @@
       document.write('City: ' + city)
     }
   </script>
+
+<footer class="foot">
+  <i class="fa" style="font-size: 22px">&#xf1f9;</i>
+  &nbsp;Copyright Made By Team Codex
+</footer>
 </body>
 
 </html>
