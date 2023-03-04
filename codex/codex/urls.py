@@ -15,6 +15,7 @@ urlpatterns = [
     path('team', views.team, name='team'),
 ]
 handler500='exceptions.views.error_500'
+
 urlpatterns += staticfiles_urlpatterns()
 
 
