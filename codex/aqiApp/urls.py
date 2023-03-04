@@ -9,4 +9,4 @@ urlpatterns=[
 ]
 
 # Developed By Team Codex
-# Credits: Harsh Anand (Github: anand-harsh), Rishit Kumar 
+# Credits: Harsh Anand (Github: anand-harsh), Rishit Kumar (Github: CoderX30)

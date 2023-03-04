@@ -44,4 +44,4 @@ def predict_heatwave(request):
         return render(request, 'heatwave-result.html', {'heatindex': heatindex, 'city':city, 'year':year, 'month':month, 'rainfall':rainfall, 'mintemp':mintemp, 'maxtemp':maxtemp, 'maxhumidity':maxhumidity, 'minhumidity':minhumidity, 'minwindspeed':minwindspeed, 'maxwindspeed':maxwindspeed})
 
 # Developed By Team Codex
-# Credits: Harsh Anand (Github: anand-harsh), Rishit Kumar
+# Credits: Harsh Anand (Github: anand-harsh), Rishit Kumar (Github: CoderX30)

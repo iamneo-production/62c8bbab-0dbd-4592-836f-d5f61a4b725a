@@ -41,4 +41,4 @@ def predict_aqi(request):
         return render(request, 'result.html', {'aqi': aqi, 'city':city, 'year':year, 'month':month, 'so2':so2, 'nh3':nh3, 'nox':nox, 'pm10':pm10, 'pm25':pm25})
 
 # Developed By Team Codex
-# Credits: Harsh Anand (Github: anand-harsh), Rishit Kumar 
+# Credits: Harsh Anand (Github: anand-harsh), Rishit Kumar (Github: CoderX30) 

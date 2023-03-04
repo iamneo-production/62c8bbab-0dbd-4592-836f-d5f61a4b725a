@@ -64,4 +64,4 @@ from sklearn.metrics import r2_score
 r2_score(Y_test, Y_predicted)
 
 # Developed By Team Codex
-# Credits:  Rishit Kumar, Harsh Anand (Github: anand-harsh)
+# Credits:  Rishit Kumar(Github: CoderX30), Harsh Anand (Github: anand-harsh)
