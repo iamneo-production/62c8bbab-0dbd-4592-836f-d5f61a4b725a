@@ -275,35 +275,35 @@
         {% if city == "ADILABAD" or city == "Khammam" %}
 
         {% if heatindex >= 51 %}
-        <span style="background-color: rgb(207, 5, 5);" class="denote">{{heatindex}}</span>
+        <span style="background-color: rgb(207, 5, 5);" class="denote">{{heatindex}} &#x2103;</span>
         <span class="ssh">
           <span class="title">Danger</span>
-          <span class="title1">Heat Wave Alert</span>
+          <span class="title1">Heat Wave Alert !!</span>
         </span>
 
         {% elif heatindex >= 38 %}
-        <span style="background-color: rgb(163, 67, 11);" class="denote">{{heatindex}}</span>
+        <span style="background-color: rgb(163, 67, 11);" class="denote">{{heatindex}} &#x2103;</span>
         <span class="ssh">
           <span class="title">Severe</span>
-          <span class="title1">Heat Wave Alert</span>
+          <span class="title1">Heat Wave Alert !!</span>
         </span>
 
         {% elif heatindex >= 28 %}
-        <span style="background-color: rgb(255, 106, 0);" class="denote">{{heatindex}}</span>
+        <span style="background-color: rgb(255, 106, 0);" class="denote">{{heatindex}} &#x2103;</span>
         <span class="ssh">
           <span class="title">Extreme Caution</span>
-          <span class="title1">Heat Wave Alert</span>
+          <span class="title1">Heat Wave Alert !!</span>
         </span>
 
         {% elif heatindex >= 24%}
-        <span style="background-color: rgb(197, 178, 10);" class="denote">{{heatindex}}</span>
+        <span style="background-color: rgb(197, 178, 10);" class="denote">{{heatindex}} &#x2103;</span>
         <span class="ssh">
           <span class="title">Caution</span>
-          <span class="title1">Heat Wave Alert</span>
+          <span class="title1">Heat Wave Alert !!</span>
         </span>
 
         {% elif heatindex >= 0%}
-        <span style="background-color: rgb(27, 199, 21);" class="denote">{{heatindex}}</span>
+        <span style="background-color: rgb(27, 199, 21);" class="denote">{{heatindex}} &#x2103;</span>
         <span class="ssh">
           <span class="title">Normal</span>
           <span class="title1">No Heat Wave</span>
@@ -312,35 +312,35 @@
 
         {% elif city == "Karimnagar" or city == "Nizamabad" or city == "WARANGAL R" or city == "WARANGAL U" %}
         {% if heatindex >= 54 %}
-        <span style="background-color: rgb(207, 5, 5);" class="denote">{{heatindex}}</span>
+        <span style="background-color: rgb(207, 5, 5);" class="denote">{{heatindex}} &#x2103;</span>
         <span class="ssh">
           <span class="title">Dnager</span>
-          <span class="title1">Heat Wave Alert</span>
+          <span class="title1">Heat Wave Alert !!</span>
         </span>
 
         {% elif heatindex >= 41 %}
-        <span style="background-color: rgb(163, 67, 11);" class="denote">{{heatindex}}</span>
+        <span style="background-color: rgb(163, 67, 11);" class="denote">{{heatindex}} &#x2103;</span>
         <span class="ssh">
           <span class="title">Severe</span>
-          <span class="title1">Heat Wave Alert</span>
+          <span class="title1">Heat Wave Alert !!</span>
         </span>
 
         {% elif heatindex >= 32 %}
-        <span style="background-color: rgb(255, 106, 0);" class="denote">{{heatindex}}</span>
+        <span style="background-color: rgb(255, 106, 0);" class="denote">{{heatindex}} &#x2103;</span>
         <span class="ssh">
           <span class="title">Extreme Caution</span>
-          <span class="title1">Heat Wave Alert</span>
+          <span class="title1">Heat Wave Alert !!</span>
         </span>
 
         {% elif heatindex >= 27%}
-        <span style="background-color: rgb(197, 178, 10);" class="denote">{{heatindex}}</span>
+        <span style="background-color: rgb(197, 178, 10);" class="denote">{{heatindex}} &#x2103;</span>
         <span class="ssh">
           <span class="title">Caution</span>
-          <span class="title1">Heat Wave Alert</span>
+          <span class="title1">Heat Wave Alert !!</span>
         </span>
 
         {% elif heatindex >= 0%}
-        <span style="background-color: rgb(27, 199, 21);" class="denote">{{heatindex}}</span>
+        <span style="background-color: rgb(27, 199, 21);" class="denote">{{heatindex}} &#x2103;</span>
         <span class="ssh">
           <span class="title">Normal</span>
           <span class="title1">No Heat Wave</span>
@@ -350,7 +350,6 @@
         {% endif %}
 
       </div>
-      <!--span class="accuracy">Accuracy: 98.92%</span-->
 
       <a href="{% url 'predict-heatwave' %}">Predict another Heat Wave?</a>
     </div>
