@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title></title>
+  <title>Team CodeX - AQI Result</title>
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -17,7 +17,6 @@
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css" />
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-  <link rel="stylesheet" href="aqi-result.css" />
 </head>
 
 <style>
@@ -90,8 +89,8 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-  
- 
+
+
   }
 
   .denote {
@@ -128,9 +127,9 @@
     color: brown;
   }
 
-.back-arr a:hover {
-  color: white;
-}
+  .back-arr a:hover {
+    color: white;
+  }
 </style>
 
 <body>
@@ -155,29 +154,29 @@
       <p>PM2.5 : {{pm25}}</p>
 
       <div class="select">
-        {% if aqi >= 400 %}
+        {% if aqi > 400 %}
         <span style="background-color: rgb(170, 3, 3);" class="denote">{{aqi}}</span>
-        <span class="title">SEVERE</span>
+        <span class="title">Hazardous</span>
 
-        {% elif aqi >= 300 %}
-        <span style="background-color: rgb(202, 80, 10);" class="denote">{{aqi}}</span>
-        <span class="title">VERY POOR</span>
+        {% elif aqi > 300 %}
+        <span style="background-color: rgb(168, 55, 255);" class="denote">{{aqi}}</span>
+        <span class="title">Severe</span>
 
-        {% elif aqi >= 200 %}
+        {% elif aqi > 200 %}
+        <span style="background-color: rgb(255, 0, 187);" class="denote">{{aqi}}</span>
+        <span class="title">Unhealthy</span>
+
+        {% elif aqi > 100 %}
         <span style="background-color: rgb(255, 106, 0);" class="denote">{{aqi}}</span>
-        <span class="title">POOR</span>
+        <span class="title">Poor</span>
 
-        {% elif aqi >= 100 %}
-        <span style="background-color: rgb(197, 125, 10);" class="denote">{{aqi}}</span>
-        <span class="title">MORDERATE</span>
-
-        {% elif aqi >= 50 %}
-        <span style="background-color: rgb(93, 212, 109);" class="denote">{{aqi}}</span>
-        <span class="title">SATISFACTORY</span>
+        {% elif aqi > 50 %}
+        <span style="background-color: rgb(221, 218, 45);" class="denote">{{aqi}}</span>
+        <span class="title">Moderate</span>
 
         {% elif aqi >= 0 %}
-        <span style="background-color: rgb(221, 218, 45);" class="denote">{{aqi}}</span>
-        <span class="title">GOOD</span>
+        <span style="background-color:rgb(93, 212, 109);" class="denote">{{aqi}}</span>
+        <span class="title">Good</span>
 
         {% endif %}
       </div>

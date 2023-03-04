@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
+    <title>Team CodeX - Predict AQI</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -27,7 +27,6 @@
       href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
     />
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-    <link rel="stylesheet" href="form.css" />
   </head>
 
   <style>
@@ -113,6 +112,10 @@ body {
   color: rgb(0, 0, 0);
   font-weight: 600;
   font-size: 1.1rem;
+}
+
+.p-head li{
+  text-shadow: 0.1rem 0.1rem 0.6rem white;
 }
 
 .form-aqi {
@@ -232,6 +235,10 @@ body {
 .back-arr a:hover {
   color: white;
 }
+
+.unit{
+  font-size: 1rem;
+}
 </style>
 
   <body>
@@ -280,11 +287,11 @@ body {
       </p>
       <ul>
         <li>AQI values of 0 to 50 are considered Good</li>
-        <li>AQI values of 51 to 100 are considered Satisfactory</li>
-        <li>AQI values of 101 to 200 are considered Moderate</li>
-        <li>AQI values of 201 to 300 are considered Poor</li>
-        <li>AQI values of 301 to 400 are considered Very Poor</li>
-        <li>AQI values of 401 to 500 are considered Severe</li>
+        <li>AQI values of 51 to 100 are considered Moderate</li>
+        <li>AQI values of 101 to 200 are considered Poor</li>
+        <li>AQI values of 201 to 300 are considered Unhealthy</li>
+        <li>AQI values of 301 to 400 are considered Severe</li>
+        <li>AQI values of 401 to 500 are considered Hazardous</li>
         <br>
         <li>AQI values above 100 are considered unhealthy for sensitive groups</li>
         <li>AQI values above 150 are considered unhealthy for everyone</li>
@@ -293,7 +300,7 @@ body {
         Predict The AQI here by entering the name to City, Year, Month, and
         Chemical combination of SO2, NH3, NOX, PM10, PM2.5
         <br /><br />
-        Accuracy: 87.2%
+        Accuracy: 86.68%
       </p>
     </div>
 
@@ -345,7 +352,7 @@ body {
 
       <div class="row">
         <div class="col">
-          <label for="formGroupExampleInput" class="form-label">SO2</label>
+          <label for="formGroupExampleInput" class="form-label">SO2 <span class="unit">(µg/m³)</span></label>
           <input
             type="text"
             class="form-control"
@@ -355,7 +362,7 @@ body {
           />
         </div>
         <div class="col">
-          <label for="formGroupExampleInput" class="form-label">NH3</label>
+          <label for="formGroupExampleInput" class="form-label">NH3 <span class="unit">(µg/m³)</span></label>
           <input
             type="text"
             class="form-control"
@@ -365,7 +372,7 @@ body {
           />
         </div>
         <div class="col">
-          <label for="formGroupExampleInput" class="form-label">NOX</label>
+          <label for="formGroupExampleInput" class="form-label">NOX <span class="unit">(µg/m³)</span></label>
           <input
             type="text"
             class="form-control"
@@ -378,7 +385,7 @@ body {
       <div class="row">
         <div class="col">
           <label for="formGroupExampleInput" class="form-label sp-1"
-            >PM10</label
+            >PM10 <span class="unit">(µg/m³)</span></label
           >
           <input
             type="text"
@@ -390,7 +397,7 @@ body {
         </div>
         <div class="col">
           <label for="formGroupExampleInput" class="form-label sp-2"
-            >PM2.5</label
+            >PM2.5 <span class="unit">(µg/m³)</span></label
           >
           <input
             type="text"

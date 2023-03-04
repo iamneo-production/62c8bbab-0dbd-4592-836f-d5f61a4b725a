@@ -14,8 +14,9 @@ urlpatterns = [
     path('features', views.features, name='features'),
     path('team', views.team, name='team'),
 ]
-
+handler500='exceptions.views.error_500'
 urlpatterns += staticfiles_urlpatterns()
+
 
 # Developed By Team Codex
 # Credits: Harsh Anand (Github: anand-harsh), Rishit Kumar 
